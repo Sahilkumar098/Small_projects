@@ -1,0 +1,30 @@
+- hosts: docker-host
+  tasks:
+  - package:
+      name: docker
+      state: present
+  - service:
+      name: docker
+      state: started
+  - name: Pulling Httpd image from docker HUB
+    docker_image:
+      name: httpd
+      tag: latest
+      source: pull
+      state: present
+  - name: Creating a folder to store the webpages and mount to the docker container
+    shell: "mkdir /volume/"
+    ignore_errors: yes
+  - name: Copy the webpage to this directory
+    copy:
+      src: /home/ec2-user/webpage/
+      dest: /volume/
+  - name: Starting a docker container from Httpd image
+    docker_container:
+      name: webserver1
+      image: httpd:latest
+      state: started
+      ports:
+      - "81:80"
+      volumes:
+      -   "/volume:/usr/local/apache2/htdocs/"

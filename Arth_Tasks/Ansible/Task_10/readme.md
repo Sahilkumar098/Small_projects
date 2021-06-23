@@ -20,4 +20,4 @@ following operations in the managed nodes:
 🔹 The webpage used is in present in the BrownandRed folder
 
 ## Final result after execution
-![webserver is up and running](https://github.com/Sahilkumar098/Small_projects/blob/master/Arth_Tasks/Ansible/Task_10/SS/final_result.JPG)
+![webserver is up and running](https://github.com/Sahilkumar098/Small_projects/blob/master/Arth_Tasks/Ansible/Task_10/SS/final%20result.JPG)

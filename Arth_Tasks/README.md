@@ -1,5 +1,5 @@
 # Arth_Task_and__Learning
-[ ] Task 10
+[X] Task 10
 
 🔰Write an Ansible PlayBook that does the
 following operations in the managed nodes:
